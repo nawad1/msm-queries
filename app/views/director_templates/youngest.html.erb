@@ -1,0 +1,5 @@
+<h1>Youngest director</h1>
+<%= youngest_age = Director.all.maximum(:dob)%>
+<% youngest_name = Director.where({:dob=>youngest_age})%>
+<% the_name= youngest_name.at(0)%>
+<%= the_name.name%>
